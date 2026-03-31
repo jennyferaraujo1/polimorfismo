@@ -1,0 +1,63 @@
+public class Contato {
+    String nome;
+    String telefone;
+
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String n) {
+        nome = n;
+    }
+
+    public String getTelefone() {
+        return telefone;
+    }
+
+    public void setTelefone(String t) {
+        telefone = t;
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
+        Contato c1 = new Contato();
+        Contato c2 = new Contato();
+        Contato c3 = new Contato();
+
+        // Contato 1
+        System.out.println("Nome 1:");
+        c1.setNome(sc.nextLine());
+
+        System.out.println("Telefone 1:");
+        c1.setTelefone(sc.nextLine());
+
+        // Contato 2
+        System.out.println("Nome 2:");
+        c2.setNome(sc.nextLine());
+
+        System.out.println("Telefone 2:");
+        c2.setTelefone(sc.nextLine());
+
+        // Contato 3
+        System.out.println("Nome 3:");
+        c3.setNome(sc.nextLine());
+
+        System.out.println("Telefone 3:");
+        c3.setTelefone(sc.nextLine());
+
+        System.out.println("Novo telefone do contato 1:");
+        c1.setTelefone(sc.nextLine());
+
+        System.out.println("\nCONTATOS:");
+
+        System.out.println(c1.getNome() + " - " + c1.getTelefone());
+        System.out.println(c2.getNome() + " - " + c2.getTelefone());
+        System.out.println(c3.getNome() + " - " + c3.getTelefone());
+
+        sc.close();
+    }
+}
