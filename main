@@ -1,0 +1,38 @@
+public class Main {
+
+    // Função polimórfica
+    public static void mostrarInformacoes(FormaGeometrica forma) {
+
+        System.out.println("Área: " + forma.getArea());
+        System.out.println("Perímetro: " + forma.getPerimetro());
+        System.out.println("------------------------");
+    }
+
+    // Método específico para circunferências
+    public static void mostrarRaioEDiametro(Circunferencia c) {
+
+        System.out.println("Raio: " + c.raio);
+        System.out.println("Diâmetro: " + c.getDiametro());
+        System.out.println("------------------------");
+    }
+
+    public static void main(String[] args) {
+
+        Triangulo t = new Triangulo(10, 8, 6, 7);
+
+        Retangulo r = new Retangulo(5, 4);
+
+        Circunferencia c = new Circunferencia(3);
+
+        Pentagono p = new Pentagono(6, 4);
+
+        // Polimorfismo
+        mostrarInformacoes(t);
+        mostrarInformacoes(r);
+        mostrarInformacoes(c);
+        mostrarInformacoes(p);
+
+        // Método específico
+        mostrarRaioEDiametro(c);
+    }
+}
