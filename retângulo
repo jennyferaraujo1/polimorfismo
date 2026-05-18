@@ -1,0 +1,26 @@
+class Retangulo extends FormaGeometrica {
+
+    double largura;
+    double altura;
+
+    // Sobrecarga
+    public Retangulo(double lado) {
+        this.largura = lado;
+        this.altura = lado;
+    }
+
+    public Retangulo(double largura, double altura) {
+        this.largura = largura;
+        this.altura = altura;
+    }
+
+    @Override
+    public double getArea() {
+        return largura * altura;
+    }
+
+    @Override
+    public double getPerimetro() {
+        return 2 * (largura + altura);
+    }
+}
