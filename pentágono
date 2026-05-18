@@ -1,0 +1,20 @@
+class Pentagono extends FormaGeometrica {
+
+    double lado;
+    double apotema;
+
+    public Pentagono(double lado, double apotema) {
+        this.lado = lado;
+        this.apotema = apotema;
+    }
+
+    @Override
+    public double getArea() {
+        return (getPerimetro() * apotema) / 2;
+    }
+
+    @Override
+    public double getPerimetro() {
+        return lado * 5;
+    }
+}
